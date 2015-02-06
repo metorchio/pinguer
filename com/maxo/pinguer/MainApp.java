@@ -1,7 +1,9 @@
 package com.maxo.pinguer;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
+import com.maxo.pinguer.model.ReadDevices;
 import com.maxo.pinguer.model.ObservableDevice;
 import com.maxo.pinguer.view.DeviceOverviewController;
 
@@ -27,8 +29,16 @@ public class MainApp extends Application
 		devices.addAll( new ObservableDevice("Calle 1", "192.168.200.30"), 
 						new ObservableDevice("Calle 2", "192.168.200.31"),
 						new ObservableDevice("Calle 3", "192.168.200.32"),
-						new ObservableDevice("Calle 4", "10.1.1.1")			
+						new ObservableDevice("Calle 4", "192.168.200.50")			
 					  );
+		
+/*
+		ReadDevices redesXLS = new ReadDevices( "Redes.xls" );
+		
+		redesXLS.setFileSheet( "CCTV" );
+		redesXLS.inputDevicesColumns( "Ubicación", "IP" );
+		ArrayList<ObservableDevice> cameras = new ArrayList<ObservableDevice>( redesXLS.readXLSFile() );
+*/		
 	}
 	
 	public ObservableList<ObservableDevice> getDevices() 

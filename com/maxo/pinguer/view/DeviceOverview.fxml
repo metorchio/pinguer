@@ -18,9 +18,10 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button fx:id="btnRefresh" layoutX="537.0" layoutY="128.0" mnemonicParsing="false" text="Refresh" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="128.0" />
+      <Button fx:id="btnRefresh" layoutX="537.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="128.0" />
       <Label fx:id="labelCantDevices" layoutX="506.0" layoutY="81.0" text="Cant. Camaras:" AnchorPane.leftAnchor="506.0" AnchorPane.topAnchor="81.0" />
       <Label fx:id="labelLocation" layoutX="506.0" layoutY="234.0" text="Location:" AnchorPane.leftAnchor="506.0" AnchorPane.topAnchor="234.0" />
-      <Label fx:id="labelIP" layoutX="506.0" layoutY="267.0" text="IP:" AnchorPane.leftAnchor="506.0" AnchorPane.topAnchor="267.0" />
+      <Label fx:id="labelIP" layoutX="506.0" layoutY="274.0" text="IP:" AnchorPane.leftAnchor="506.0" AnchorPane.topAnchor="274.0" />
+      <Label fx:id="labelStatus" layoutX="502.0" layoutY="311.0" text="Status" AnchorPane.leftAnchor="502.0" AnchorPane.topAnchor="311.0" />
    </children>
 </AnchorPane>

@@ -27,7 +27,7 @@ public class MainApp extends Application
 		devices.addAll( new ObservableDevice("Calle 1", "192.168.200.30"), 
 						new ObservableDevice("Calle 2", "192.168.200.31"),
 						new ObservableDevice("Calle 3", "192.168.200.32"),
-						new ObservableDevice("Calle 4", "192.168.200.33")			
+						new ObservableDevice("Calle 4", "10.1.1.1")			
 					  );
 	}
 	

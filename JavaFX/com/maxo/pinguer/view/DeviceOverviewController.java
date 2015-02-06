@@ -61,13 +61,13 @@ public class DeviceOverviewController
 		 */
 	}
 	
-	private void showDeviceDetails ( ObservableDevice device ) //throws IOException, InterruptedException
+	private void showDeviceDetails( ObservableDevice device )
 	{
 		if ( device != null  )
 		{
 			labelLocation.setText( device.getLocation().get() );
 			labelIP.setText( device.getIP().get() );
-			//labelStatus.setText( device.isAlive().get() );
+			labelStatus.setText("Status.");
 		}
 		else
 		{
@@ -82,7 +82,6 @@ public class DeviceOverviewController
 	{
 		ObservableDevice selectedItem = deviceTable.getSelectionModel().getSelectedItem();
 		labelStatus.setText( selectedItem.isAlive().get() );
-		//columnStatus.setCellValueFactory(new PropertyValueFactory<ObservableDevice, String>( "Hola" ) );
 		//columnStatus.setCellValueFactory( new PropertyValueFactory<String, String>("Hola") );
 	}
 	

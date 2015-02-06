@@ -34,7 +34,7 @@ public class ObservableDevice extends IPv4
 	public StringProperty isAlive() throws IOException, InterruptedException
 	{	
 	
-		return new SimpleStringProperty( String.valueOf( IPv4.pingIP( this.ip.toString() ) ) );
+		return new SimpleStringProperty( String.valueOf( IPv4.pingIP( this.ip.get() ) ) );
 		
 		//return new SimpleBooleanProperty( IPv4.pingIP( this.ip.toString() )  );
 		

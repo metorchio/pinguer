@@ -104,6 +104,7 @@ public class DeviceOverviewController
 			 @Override 
 			 protected ObservableList<ObservableDevice> call() throws InterruptedException, IOException
 			 {
+				 btnRefresh.setText("Cancel");
 				 refresh();
 				 return null;
 			 }
@@ -117,7 +118,7 @@ public class DeviceOverviewController
 				 if ( newState == Worker.State.SUCCEEDED ) 
 				 {
 					 loadingInd.setVisible(false);
-					 //loadingInd.setProgress(1.0);
+					 btnRefresh.setText("Refresh");
 					 
 				 }
 			 }

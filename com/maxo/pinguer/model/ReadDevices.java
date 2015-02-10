@@ -34,9 +34,9 @@ public class ReadDevices {
 		this.column2 = deviceLocation;
 	}
   
-	public ArrayList<Device> readXLSFile( ) throws IOException  
+	public ArrayList<ObservableDevice> readXLSFile( ) throws IOException  
 	{
-		ArrayList<Device> devices = new ArrayList<>();  
+		ArrayList<ObservableDevice> devices = new ArrayList<>();  
 		  
 	    File inputWorkbook = new File( inputFile );
 	    Workbook w;
@@ -70,7 +70,7 @@ public class ReadDevices {
 		    		  String ip = columnIP[i].getContents();
 		    		  if ( IPv4.isValid(ip) )
 		    		  {
-		    			  devices.add( new Device(location, ip) );
+		    			  devices.add( new ObservableDevice(location, ip) );
 		    		  }
 		    	  }
 		      }

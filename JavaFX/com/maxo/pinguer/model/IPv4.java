@@ -61,7 +61,15 @@ public class IPv4
 	private static boolean ping( String ip ) throws IOException
 	{
 		InetAddress host = InetAddress.getByName( ip );
-		return host.isReachable(10000);
+		try 
+		{
+			return host.isReachable(15000);
+		}
+		catch (IOException e)
+		{
+            e.printStackTrace();
+            return false;
+		}
 	}
 	
 	

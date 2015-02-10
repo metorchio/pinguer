@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="226.0" prefWidth="254.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maxo.pinguer.view.AboutLayoutController">
+   <children>
+      <TitledPane collapsible="false" prefHeight="226.0" prefWidth="254.0" text="About" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <TextArea editable="false" prefHeight="180.0" prefWidth="200.0" text="&#10;&#10;Pinguer&#10;&#10;Version: 0.4&#10;&#10;Developed by Maxo..#">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextArea>
+         </content></TitledPane>
+      <Button fx:id="exit" layoutX="184.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleExit" text="Ok.">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="73.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

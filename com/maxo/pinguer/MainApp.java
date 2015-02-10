@@ -8,6 +8,7 @@ import com.maxo.pinguer.model.ReadDevices;
 import com.maxo.pinguer.model.ObservableDevice;
 import com.maxo.pinguer.view.DeviceOverviewController;
 import com.maxo.pinguer.view.RootLayoutController;
+import com.maxo.pinguer.view.PreferencesLayoutController;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -26,6 +27,10 @@ public class MainApp extends Application
 	
 	private ObservableList<ObservableDevice> devices = FXCollections.observableArrayList();
 	
+	private String nameFileSheet = "CCTV";
+	private String nameColLocation = "Ubicación";
+	private String nameColIP = "IP";
+	
 	public MainApp()
 	{
 		
@@ -39,11 +44,13 @@ public class MainApp extends Application
 	
 	public void loadDevicesFromXLS( File file ) throws IOException
 	{
-		
+
 		ReadDevices redesXLS = new ReadDevices( file.getAbsolutePath() );
 		
-		redesXLS.setFileSheet( "CCTV" );
-		redesXLS.inputDevicesColumns( "Ubicación", "IP" );
+		redesXLS.setFileSheet( nameFileSheet );
+		redesXLS.inputDevicesColumns( nameColLocation, nameColIP );
+		//redesXLS.setFileSheet( "CCTV" );
+		//redesXLS.inputDevicesColumns( "Ubicación", "IP" );
 		ArrayList<ObservableDevice> cameras = new ArrayList<ObservableDevice>( redesXLS.readXLSFile() );
 
 		devices.clear();
@@ -51,6 +58,20 @@ public class MainApp extends Application
 		
 	}
 	
+	public void setFileSheet( String fileSheet )
+	{
+		this.nameFileSheet = fileSheet;
+	}
+	
+	public void setColumnIP( String colIP) 
+	{
+		this.nameColIP = colIP;		
+	}
+	
+	public void setColumnLocation( String colLocation ) 
+	{
+		this.nameColLocation = colLocation;
+	}
 	
 	public ObservableList<ObservableDevice> getDevices() 
 	{

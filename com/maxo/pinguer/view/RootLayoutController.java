@@ -5,12 +5,8 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -44,7 +40,7 @@ public class RootLayoutController
     		}
     		catch (Exception e)
     		{
-    			System.err.println("Not file found.");
+    			System.err.println("File not found.");
     		}
     	}
     	
@@ -53,7 +49,7 @@ public class RootLayoutController
     @FXML
     private void handleAbout() throws IOException
     {
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("AboutLayout.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("AboutLayout2.fxml"));
         AnchorPane aboutWindow = (AnchorPane)loader.load();
         
         AboutLayoutController controller = loader.getController();

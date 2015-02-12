@@ -14,6 +14,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -81,6 +82,8 @@ public class MainApp extends Application
 	{
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Pinguer");
+		Image icon = new Image( getClass().getResourceAsStream("Pinguer.jpg") );
+		this.primaryStage.getIcons().add(icon);
 		
 		initRootLayout();
 		
@@ -89,6 +92,7 @@ public class MainApp extends Application
 
 	public void initRootLayout()
 	{
+
 		try
 		{
 			FXMLLoader loader = new FXMLLoader();

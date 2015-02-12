@@ -8,7 +8,6 @@ import com.maxo.pinguer.model.ReadDevices;
 import com.maxo.pinguer.model.ObservableDevice;
 import com.maxo.pinguer.view.DeviceOverviewController;
 import com.maxo.pinguer.view.RootLayoutController;
-import com.maxo.pinguer.view.PreferencesLayoutController;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -49,8 +48,6 @@ public class MainApp extends Application
 		
 		redesXLS.setFileSheet( nameFileSheet );
 		redesXLS.inputDevicesColumns( nameColLocation, nameColIP );
-		//redesXLS.setFileSheet( "CCTV" );
-		//redesXLS.inputDevicesColumns( "Ubicación", "IP" );
 		ArrayList<ObservableDevice> cameras = new ArrayList<ObservableDevice>( redesXLS.readXLSFile() );
 
 		devices.clear();

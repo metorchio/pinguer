@@ -18,11 +18,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </TextArea>
-            <ImageView fitHeight="289.0" fitWidth="302.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.27569580078125" AnchorPane.rightAnchor="0.27569580078125" AnchorPane.topAnchor="0.0">
-               <image>
-                  <Image url="@../../../../../build/dist/resources/aboutImg/Duende_fumon.png" />
-               </image>
-            </ImageView>
+            <ImageView fx:id="background" fitHeight="289.0" fitWidth="302.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.27569580078125" AnchorPane.rightAnchor="0.27569580078125" AnchorPane.topAnchor="0.0" />
             <Button fx:id="exit" layoutX="200.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="25.0" prefWidth="59.0" text="Ok." AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="227.0" />
          </children>
       </AnchorPane>

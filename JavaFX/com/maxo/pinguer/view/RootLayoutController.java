@@ -6,7 +6,10 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -51,9 +54,11 @@ public class RootLayoutController
     {
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("AboutLayout2.fxml"));
         AnchorPane aboutWindow = (AnchorPane)loader.load();
+        //aboutWindow.setStyle("-fx-background-image: url('file://Duende_fumon.png');");
         
         AboutLayoutController controller = loader.getController();
         controller.setMainWindow(this);
+        controller.setBackground();
         
         Stage stage = new Stage();
         stage.initModality(Modality.WINDOW_MODAL);  
@@ -62,6 +67,9 @@ public class RootLayoutController
         
         Scene scene = new Scene(aboutWindow);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.setTitle("About");
+        
         stage.show(); 
     	
     }
@@ -84,6 +92,8 @@ public class RootLayoutController
          
          Scene scene = new Scene(preferencesWindow);
          stage.setScene(scene);
+         stage.setResizable(false);
+         stage.setTitle("Preferences");
          stage.show(); 
     	
     	

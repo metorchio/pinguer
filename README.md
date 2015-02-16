@@ -1,5 +1,4 @@
-# pinguer
-Pinguer Software.
+# Pinguer Software.
 
 @EN:
 It's a simple ping/request soft. Load's an XLS file (with a list of devs), and refresh if IP devices are alive.
